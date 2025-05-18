@@ -1,10 +1,131 @@
-[gd_scene load_steps=4 format=3 uid="uid://hklnqlle6ic1"]
+[gd_scene load_steps=19 format=3 uid="uid://hklnqlle6ic1"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_j6qm6"]
-[ext_resource type="Texture2D" uid="uid://bajpllsgdvmkt" path="res://icon.svg" id="2_fc15q"]
+[ext_resource type="Texture2D" uid="uid://c7yss0irtpric" path="res://Assets/Players/players blue x3.png" id="2_knddr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i6xb2"]
 size = Vector2(128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dpgy"]
+atlas = ExtResource("2_knddr")
+region = Rect2(0, 480, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50yh3"]
+atlas = ExtResource("2_knddr")
+region = Rect2(96, 480, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ooeoi"]
+atlas = ExtResource("2_knddr")
+region = Rect2(192, 480, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2poi"]
+atlas = ExtResource("2_knddr")
+region = Rect2(288, 480, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3dcp5"]
+atlas = ExtResource("2_knddr")
+region = Rect2(384, 480, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pb204"]
+atlas = ExtResource("2_knddr")
+region = Rect2(480, 480, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wkgsj"]
+atlas = ExtResource("2_knddr")
+region = Rect2(576, 480, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jj61g"]
+atlas = ExtResource("2_knddr")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4vbs6"]
+atlas = ExtResource("2_knddr")
+region = Rect2(0, 288, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aufx2"]
+atlas = ExtResource("2_knddr")
+region = Rect2(96, 288, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ft2ek"]
+atlas = ExtResource("2_knddr")
+region = Rect2(192, 288, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q1bqt"]
+atlas = ExtResource("2_knddr")
+region = Rect2(288, 288, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3iym4"]
+atlas = ExtResource("2_knddr")
+region = Rect2(0, 96, 96, 96)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_71lky"]
+atlas = ExtResource("2_knddr")
+region = Rect2(96, 96, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wpsee"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dpgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50yh3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ooeoi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2poi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3dcp5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pb204")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wkgsj")
+}],
+"loop": true,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jj61g")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4vbs6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aufx2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ft2ek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q1bqt")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3iym4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_71lky")
+}],
+"loop": true,
+"name": &"talk",
+"speed": 5.0
+}]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_j6qm6")
@@ -12,7 +133,8 @@ script = ExtResource("1_j6qm6")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_i6xb2")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_fc15q")
-
 [node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_wpsee")
+animation = &"death"
