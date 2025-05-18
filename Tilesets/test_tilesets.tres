@@ -1,6 +1,8 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://dq22oefprurwj"]
+[gd_resource type="TileSet" load_steps=4 format=3 uid="uid://dq22oefprurwj"]
 
 [ext_resource type="Texture2D" uid="uid://dd57vylnil42r" path="res://Assets/tileset x3.png" id="1_ya6uv"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_3o0ei"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_oeuhv"]
 resource_name = "Floor & Walls"
@@ -552,4 +554,7 @@ texture_region_size = Vector2i(32, 32)
 
 [resource]
 tile_size = Vector2i(32, 32)
+physics_layer_0/collision_layer = 1
+physics_layer_0/collision_mask = 2
+physics_layer_0/physics_material = SubResource("PhysicsMaterial_3o0ei")
 sources/0 = SubResource("TileSetAtlasSource_oeuhv")
