@@ -7,21 +7,27 @@
 [node name="Main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_pyi2x")]
+light_mask = 2
+visibility_layer = 2
+z_index = 1
 position = Vector2(578, 328)
-collision_mask = 2
 
-[node name="Node2D" parent="." instance=ExtResource("2_cjctj")]
+[node name="documentation item" parent="." instance=ExtResource("2_cjctj")]
 position = Vector2(276, 336)
-dialogue_lines = Array[String](["Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop", "Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop"])
+dialogue_lines = Array[String](["A Caesar cipher shifts letters by a fixed amount.", " A becomes D in a shift of 3. Simple, yet ancient."])
 
-[node name="Node2D2" parent="." instance=ExtResource("2_cjctj")]
+[node name="shift 10 hint item" parent="." instance=ExtResource("2_cjctj")]
 position = Vector2(821, 320)
-dialogue_lines = Array[String](["THE STARS HAVE ALIGNED!", "THE FESTIVAL... IS NIGH....", "A CELEBRATION OF WAR!", "THEEEEE RADHANNNNN FESTIVALLLLLLL!!!!!!!!"])
+dialogue_lines = Array[String](["They say the general used to march on the 10th hour.", " It's always been his favorite number."])
 
 [node name="DialogueBox" parent="." instance=ExtResource("3_mv4uq")]
 
-[node name="Node2D3" parent="." instance=ExtResource("2_cjctj")]
+[node name="password here" parent="." instance=ExtResource("2_cjctj")]
 position = Vector2(571, 49)
 dialogue_lines = Array[String](["Enter The Password:"])
 requires_password = true
-correct_password = "Fuck Bilal"
+correct_password = "sherellovesfood"
+
+[node name="encrypted password item" parent="." instance=ExtResource("2_cjctj")]
+position = Vector2(982, 132)
+dialogue_lines = Array[String](["Encrypted Message: crobovvyfocpyyn"])

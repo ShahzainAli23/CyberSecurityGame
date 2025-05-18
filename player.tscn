@@ -1,10 +1,10 @@
 [gd_scene load_steps=19 format=3 uid="uid://hklnqlle6ic1"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_j6qm6"]
-[ext_resource type="Texture2D" uid="uid://c7yss0irtpric" path="res://Assets/Players/players blue x3.png" id="2_knddr"]
+[ext_resource type="Texture2D" uid="uid://dyq6qaq228c31" path="res://Assets/Players/players blue x3.png" id="2_knddr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i6xb2"]
-size = Vector2(128, 128)
+size = Vector2(41, 40)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7dpgy"]
 atlas = ExtResource("2_knddr")
@@ -128,9 +128,11 @@ animations = [{
 }]
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 2
 script = ExtResource("1_j6qm6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.5, 25)
 shape = SubResource("RectangleShape2D_i6xb2")
 
 [node name="Camera2D" type="Camera2D" parent="."]

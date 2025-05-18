@@ -15,7 +15,7 @@ size = Vector2(130, 130)
 script = ExtResource("1_hknxn")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
-collision_layer = 2
+collision_mask = 2
 script = ExtResource("1_mmw81")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
@@ -25,7 +25,7 @@ texture = ExtResource("2_13ghi")
 shape = SubResource("RectangleShape2D_8doxa")
 
 [node name="InteractArea" type="Area2D" parent="."]
-collision_layer = 2
+collision_mask = 2
 script = ExtResource("3_5g7rw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
