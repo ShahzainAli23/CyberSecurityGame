@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://icnwg3hlsr66"]
+
+[ext_resource type="PackedScene" uid="uid://hklnqlle6ic1" path="res://player.tscn" id="1_pyi2x"]
+[ext_resource type="PackedScene" uid="uid://bx4ui52yqe8mn" path="res://item.tscn" id="2_cjctj"]
+[ext_resource type="PackedScene" uid="uid://dm8ufwn018j3m" path="res://DialogueBox.tscn" id="3_mv4uq"]
+
+[node name="Main" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_pyi2x")]
+position = Vector2(578, 328)
+collision_mask = 2
+
+[node name="Node2D" parent="." instance=ExtResource("2_cjctj")]
+position = Vector2(276, 336)
+dialogue_lines = Array[String](["Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop", "Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop Glip Glop"])
+
+[node name="Node2D2" parent="." instance=ExtResource("2_cjctj")]
+position = Vector2(821, 320)
+dialogue_lines = Array[String](["THE STARS HAVE ALIGNED!", "THE FESTIVAL... IS NIGH....", "A CELEBRATION OF WAR!", "THEEEEE RADHANNNNN FESTIVALLLLLLL!!!!!!!!"])
+
+[node name="DialogueBox" parent="." instance=ExtResource("3_mv4uq")]
+
+[node name="Node2D3" parent="." instance=ExtResource("2_cjctj")]
+position = Vector2(571, 49)
+dialogue_lines = Array[String](["Enter The Password:"])
+requires_password = true
+correct_password = "Fuck Bilal"

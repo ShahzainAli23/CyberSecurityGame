@@ -1,0 +1,33 @@
+# Godot-specific
+.import/
+export.cfg
+export_presets.cfg
+*.import
+*.converted.res
+*.converted.scn
+.godot/
+
+# C# / Godot Mono (if you're not using it, you can skip this)
+.mono/
+data_*/
+mono_crash.*
+
+# Temporary / Auto-generated files
+*.tmp
+*.log
+
+# OS-specific
+.DS_Store           # macOS
+Thumbs.db           # Windows
+ehthumbs.db         # Windows
+Desktop.ini         # Windows
+
+# Editor / IDE configs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Build output folders (optional, if you're compiling or exporting to these)
+bin/
+build/

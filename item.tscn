@@ -1,0 +1,32 @@
+[gd_scene load_steps=7 format=3 uid="uid://bx4ui52yqe8mn"]
+
+[ext_resource type="Script" path="res://item.gd" id="1_hknxn"]
+[ext_resource type="Script" path="res://staticBodyItem.gd" id="1_mmw81"]
+[ext_resource type="Texture2D" uid="uid://bajpllsgdvmkt" path="res://icon.svg" id="2_13ghi"]
+[ext_resource type="Script" path="res://area_2d_item.gd" id="3_5g7rw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8doxa"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwnkq"]
+size = Vector2(130, 130)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_hknxn")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 2
+script = ExtResource("1_mmw81")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("2_13ghi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_8doxa")
+
+[node name="InteractArea" type="Area2D" parent="."]
+collision_layer = 2
+script = ExtResource("3_5g7rw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
+shape = SubResource("RectangleShape2D_hwnkq")

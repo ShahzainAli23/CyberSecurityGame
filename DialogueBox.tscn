@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=3 uid="uid://dm8ufwn018j3m"]
+
+[ext_resource type="Script" path="res://canvas_layer.gd" id="1_qf6sp"]
+
+[sub_resource type="Theme" id="Theme_0eqr1"]
+
+[sub_resource type="FontFile" id="FontFile_ucnwg"]
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/22/0/ascent = 0.0
+cache/0/22/0/descent = 0.0
+cache/0/22/0/underline_position = 0.0
+cache/0/22/0/underline_thickness = 0.0
+cache/0/22/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_smmy0"]
+font = SubResource("FontFile_ucnwg")
+font_size = 22
+
+[sub_resource type="LabelSettings" id="LabelSettings_h2xoo"]
+font_size = 32
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_qf6sp")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(1080, 150)
+offset_left = 38.0
+offset_top = 478.0
+offset_right = 1118.0
+offset_bottom = 628.0
+theme = SubResource("Theme_0eqr1")
+
+[node name="Label" type="Label" parent="Panel"]
+custom_minimum_size = Vector2(1000, 130)
+layout_mode = 0
+offset_left = 40.0
+offset_top = 11.0
+offset_right = 1040.0
+offset_bottom = 141.0
+label_settings = SubResource("LabelSettings_smmy0")
+autowrap_mode = 2
+
+[node name="NextIcon" type="Label" parent="Panel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.019
+offset_left = 1005.0
+offset_top = 101.0
+offset_right = 1024.48
+offset_bottom = 146.0
+text = ">>"
+label_settings = SubResource("LabelSettings_h2xoo")
