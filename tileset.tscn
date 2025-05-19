@@ -73,12 +73,12 @@ position = Vector2(847, 636)
 position = Vector2(1168, 828)
 
 [node name="computer table2" parent="." instance=ExtResource("5_bixnw")]
-position = Vector2(110, 1050)
-dialogue_lines = Array[String](["Computer"])
+position = Vector2(110, 1078)
+dialogue_lines = Array[String](["A computer screen with League of Legends open on it", "I think the character on the screen is Jhin", "Lol on the global chat this man wrote \"JHIN JHIN JHIN JHIN JHIN JHIN JHIN\" ", "Jawwad Farid.... What a crazy guy..."])
 
 [node name="note wala table" parent="." instance=ExtResource("8_kaxr0")]
-position = Vector2(498, 1084)
-dialogue_lines = Array[String](["a closed computer"])
+position = Vector2(216, 1078)
+dialogue_lines = Array[String](["There's a sticky note on the screen", "\"Password for the main hall: KHTBAHVG\"", "Bruh what the hell is this place can this man just be normal..... But then again he is also literally me lol"])
 
 [node name="wall 5" parent="." instance=ExtResource("10_plmfa")]
 position = Vector2(211, 943)
@@ -90,11 +90,11 @@ dialogue_lines = Array[String](["Why this wall yellow?"])
 
 [node name="green wali screen" parent="." instance=ExtResource("11_ywer8")]
 position = Vector2(113, 944)
-dialogue_lines = Array[String](["A green screen"])
+dialogue_lines = Array[String](["[System Diagnostic - Security Core 3.12]", "\"φ(n) = n × ∏(1 - 1/p)   [where p divides n]\"", "\"Est. decryption complexity: exp(√(log n × log log n))\"", "\"ECC baseline: y² = x³ + ax + b   [verify curve params]\"", "\"override_log[SYS-L4]: Access attempt recorded @ 22:53\"", "\"Door to the outside: m = c^d mod n\"", "\"auth_keychain mismatch: retry recommended\"", "\"checksum: 0x3DA91F2F\"", "Bro what does that even mean..."])
 
 [node name="note wala chest" parent="." instance=ExtResource("12_88dk6")]
 position = Vector2(497, 1001)
-dialogue_lines = Array[String](["write a hint here"])
+dialogue_lines = Array[String](["A note?", "\"Shift ciphers are too easy. I switched to something stronger — uses a whole word as the key and repeats it. Much harder to break.\"", "\"What are you gonna do now boy\"", "- Jawwad Farid"])
 
 [node name="closed door 3" parent="." instance=ExtResource("4_c4kj8")]
 position = Vector2(1680, 784)
@@ -160,7 +160,7 @@ object_to_spawn = ExtResource("9_qf8ch")
 position = Vector2(719, 784)
 dialogue_lines = Array[String](["Enter Password: "])
 requires_password = true
-correct_password = "balorant"
+correct_password = "BALORANT"
 object_to_spawn = ExtResource("9_qf8ch")
 
 [node name="rigged wall" parent="." instance=ExtResource("16_7fmeq")]

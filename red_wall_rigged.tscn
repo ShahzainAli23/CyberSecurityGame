@@ -2,14 +2,14 @@
 
 [ext_resource type="Script" path="res://item.gd" id="1_6r05t"]
 [ext_resource type="Script" path="res://staticBodyItem.gd" id="2_x7pjm"]
-[ext_resource type="Texture2D" uid="uid://b707qksep7dl3" path="res://Assets/set_det.png" id="3_jv3jp"]
+[ext_resource type="Texture2D" uid="uid://cukbaq6fnbxe1" path="res://Assets/set_det.png" id="3_jv3jp"]
 [ext_resource type="Script" path="res://area_2d_item.gd" id="4_3mkfo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8doxa"]
-size = Vector2(96, 49)
+size = Vector2(64, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hwnkq"]
-size = Vector2(98, 51)
+size = Vector2(67, 51.5)
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_6r05t")
@@ -24,7 +24,7 @@ region_enabled = true
 region_rect = Rect2(192, 0, 96, 96)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, -23.5)
+position = Vector2(11, -23.5)
 shape = SubResource("RectangleShape2D_8doxa")
 
 [node name="InteractArea" type="Area2D" parent="."]
@@ -32,5 +32,5 @@ collision_mask = 2
 script = ExtResource("4_3mkfo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
-position = Vector2(0, -24.5)
+position = Vector2(10.5, -23.25)
 shape = SubResource("RectangleShape2D_hwnkq")
