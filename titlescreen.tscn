@@ -1,4 +1,7 @@
-[gd_scene format=3 uid="uid://0wqk4n3m4u7b"]
+[gd_scene load_steps=3 format=3 uid="uid://0wqk4n3m4u7b"]
+
+[ext_resource type="Script" path="res://titlescreennode.gd" id="1_drfqu"]
+[ext_resource type="Texture2D" uid="uid://btmdivamnnufy" path="res://Assets/titlescreen.png" id="1_ep5ty"]
 
 [node name="Titlescreen" type="Control"]
 layout_mode = 3
@@ -8,18 +11,33 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Control" type="Control" parent="."]
+[node name="titlescreennode" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_drfqu")
 
-[node name="TextureRect" type="TextureRect" parent="Control"]
+[node name="TextureRect" type="TextureRect" parent="titlescreennode"]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("1_ep5ty")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="titlescreennode"]
+layout_mode = 0
+offset_left = 700.0
+offset_top = 400.0
+offset_right = 972.0
+offset_bottom = 431.0
+
+[node name="PlayButton" type="Button" parent="titlescreennode/VBoxContainer"]
+layout_mode = 2
+text = "PLAY"
+
+[connection signal="pressed" from="titlescreennode/VBoxContainer/PlayButton" to="titlescreennode" method="_on_play_button_pressed"]
