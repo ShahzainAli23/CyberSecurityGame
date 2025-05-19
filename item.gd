@@ -3,7 +3,7 @@ extends Node2D
 @export var dialogue_lines: Array[String] = []
 @export var requires_password: bool = false
 @export var correct_password: String = ""
-
+@export var object_to_spawn: PackedScene
 
 func _ready():
 	$InteractArea.connect("body_entered", _on_body_entered)
@@ -18,15 +18,13 @@ func _on_body_exited(body):
 		body.interactable = null
 
 func interact():
+	var player = get_node("/root/Main/Player")
+	player.can_move = false
+	var dialog_box = get_node("/root/Main/DialogueBox")
+
 	if requires_password:
-		var player = get_node("/root/Main/Player")
-		player.can_move = false
-		var dialog_box = get_node("/root/Main/DialogueBox")
-		dialog_box.request_password(correct_password, func(): player.can_move = true)
+		dialog_box.request_password(correct_password, func(): player.can_move = true, self)
 	else:
 		if dialogue_lines.size() == 0:
 			return
-		var player = get_node("/root/Main/Player")
-		player.can_move = false
-		var dialog_box = get_node("/root/Main/DialogueBox")
 		dialog_box.show_dialogue(dialogue_lines, func(): player.can_move = true)

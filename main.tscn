@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://icnwg3hlsr66"]
 
 [ext_resource type="PackedScene" uid="uid://hklnqlle6ic1" path="res://player.tscn" id="1_pyi2x"]
-[ext_resource type="PackedScene" uid="uid://bx4ui52yqe8mn" path="res://item.tscn" id="2_cjctj"]
+[ext_resource type="PackedScene" uid="uid://cai1gi67c7lxv" path="res://tileset.tscn" id="3_dukgf"]
 [ext_resource type="PackedScene" uid="uid://dm8ufwn018j3m" path="res://DialogueBox.tscn" id="3_mv4uq"]
 
 [node name="Main" type="Node2D"]
@@ -10,24 +10,9 @@
 light_mask = 2
 visibility_layer = 2
 z_index = 1
-position = Vector2(578, 328)
-
-[node name="documentation item" parent="." instance=ExtResource("2_cjctj")]
-position = Vector2(276, 336)
-dialogue_lines = Array[String](["A Caesar cipher shifts letters by a fixed amount.", " A becomes D in a shift of 3. Simple, yet ancient."])
-
-[node name="shift 10 hint item" parent="." instance=ExtResource("2_cjctj")]
-position = Vector2(821, 320)
-dialogue_lines = Array[String](["They say the general used to march on the 10th hour.", " It's always been his favorite number."])
+position = Vector2(531, 202)
 
 [node name="DialogueBox" parent="." instance=ExtResource("3_mv4uq")]
 
-[node name="password here" parent="." instance=ExtResource("2_cjctj")]
-position = Vector2(571, 49)
-dialogue_lines = Array[String](["Enter The Password:"])
-requires_password = true
-correct_password = "sherellovesfood"
-
-[node name="encrypted password item" parent="." instance=ExtResource("2_cjctj")]
-position = Vector2(982, 132)
-dialogue_lines = Array[String](["Encrypted Message: crobovvyfocpyyn"])
+[node name="Tileset" parent="." instance=ExtResource("3_dukgf")]
+position = Vector2(61, -4)

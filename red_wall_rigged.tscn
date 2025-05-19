@@ -1,34 +1,36 @@
-[gd_scene load_steps=7 format=3 uid="uid://sq3eb8x4hen5"]
+[gd_scene load_steps=7 format=3 uid="uid://dnp4wpklsqkr1"]
 
-[ext_resource type="Script" path="res://item.gd" id="1_24kqy"]
-[ext_resource type="Script" path="res://staticBodyItem.gd" id="2_bb1si"]
-[ext_resource type="Texture2D" uid="uid://b707qksep7dl3" path="res://Assets/set_det.png" id="3_87pnv"]
-[ext_resource type="Script" path="res://area_2d_item.gd" id="4_7t0cm"]
+[ext_resource type="Script" path="res://item.gd" id="1_6r05t"]
+[ext_resource type="Script" path="res://staticBodyItem.gd" id="2_x7pjm"]
+[ext_resource type="Texture2D" uid="uid://b707qksep7dl3" path="res://Assets/set_det.png" id="3_jv3jp"]
+[ext_resource type="Script" path="res://area_2d_item.gd" id="4_3mkfo"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8doxa"]
-size = Vector2(96, 96)
+size = Vector2(96, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hwnkq"]
-size = Vector2(98, 98)
+size = Vector2(98, 51)
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_24kqy")
+script = ExtResource("1_6r05t")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 collision_mask = 2
-script = ExtResource("2_bb1si")
+script = ExtResource("2_x7pjm")
 
 [node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
-texture = ExtResource("3_87pnv")
+texture = ExtResource("3_jv3jp")
 region_enabled = true
-region_rect = Rect2(0, 96, 96, 96)
+region_rect = Rect2(192, 0, 96, 96)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -23.5)
 shape = SubResource("RectangleShape2D_8doxa")
 
 [node name="InteractArea" type="Area2D" parent="."]
 collision_mask = 2
-script = ExtResource("4_7t0cm")
+script = ExtResource("4_3mkfo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
+position = Vector2(0, -24.5)
 shape = SubResource("RectangleShape2D_hwnkq")

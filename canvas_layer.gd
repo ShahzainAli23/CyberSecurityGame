@@ -19,6 +19,7 @@ var type_speed = 0.03
 var full_text = ""
 var char_index = 0
 var stop_typing = false
+var item_to_destroy: Node = null
 
 func _ready():
 	visible = false
@@ -55,7 +56,9 @@ func type_next_character():
 		typing = false
 		next_icon.visible = true
 
-func request_password(correct_password: String, callback = null):
+  # Add this at the top
+
+func request_password(correct_password: String, callback = null, item: Node = null):
 	expected_password = correct_password
 	input_buffer = ""
 	mode = "input"
@@ -64,6 +67,8 @@ func request_password(correct_password: String, callback = null):
 	visible = true
 	label.text = "Enter the password:\n> "
 	next_icon.visible = false
+	item_to_destroy = item  # Store reference to the item
+
 
 func _input(event):
 	if not active:
@@ -92,8 +97,21 @@ func _input(event):
 				input_buffer = input_buffer.substr(0, input_buffer.length() - 1)
 			elif event.keycode == KEY_ENTER or event.is_action_pressed("cycle_through_dialogues"):
 				if input_buffer == expected_password:
-					print("Access granted!")
+					if is_instance_valid(item_to_destroy):
+						var position = item_to_destroy.position
+						var parent = item_to_destroy.get_parent()
+						var replacement_scene = item_to_destroy.object_to_spawn if "object_to_spawn" in item_to_destroy else null
+
+						item_to_destroy.queue_free()
+
+						if replacement_scene:
+							var new_instance = replacement_scene.instantiate()
+							new_instance.position = position
+							parent.add_child(new_instance)
+
 					_close()
+
+
 				else:
 					label.text = "\n"
 					show_dialogue([password_fail_line], func():

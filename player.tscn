@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://c7yss0irtpric" path="res://Assets/Players/players blue x3.png" id="2_knddr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i6xb2"]
-size = Vector2(41, 40)
+size = Vector2(41, 29)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7dpgy"]
 atlas = ExtResource("2_knddr")
@@ -132,7 +132,7 @@ collision_layer = 2
 script = ExtResource("1_j6qm6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.5, 25)
+position = Vector2(-1.5, 30.5)
 shape = SubResource("RectangleShape2D_i6xb2")
 
 [node name="Camera2D" type="Camera2D" parent="."]
