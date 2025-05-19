@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://osees4qdgodr"]
+
+[ext_resource type="Script" path="res://item.gd" id="1_eumlk"]
+[ext_resource type="Script" path="res://staticBodyItem.gd" id="2_ssma3"]
+[ext_resource type="Texture2D" uid="uid://b707qksep7dl3" path="res://Assets/set_det.png" id="3_11w2q"]
+[ext_resource type="Script" path="res://area_2d_item.gd" id="4_oo2a5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8doxa"]
+size = Vector2(64, 72)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwnkq"]
+size = Vector2(66, 74)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_eumlk")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_mask = 2
+script = ExtResource("2_ssma3")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("3_11w2q")
+region_enabled = true
+region_rect = Rect2(1456, 24, 64, 72)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_8doxa")
+
+[node name="InteractArea" type="Area2D" parent="."]
+collision_mask = 2
+script = ExtResource("4_oo2a5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractArea"]
+shape = SubResource("RectangleShape2D_hwnkq")
