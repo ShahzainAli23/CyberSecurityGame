@@ -82,9 +82,11 @@ dialogue_lines = Array[String](["There's a sticky note on the screen", "\"Please
 
 [node name="wall 5" parent="." instance=ExtResource("10_plmfa")]
 position = Vector2(211, 943)
+dialogue_lines = Array[String](["Nothing on the wall"])
 
 [node name="wall 6" parent="." instance=ExtResource("10_plmfa")]
 position = Vector2(401, 943)
+dialogue_lines = Array[String](["Nothing on the wall"])
 
 [node name="green wali screen" parent="." instance=ExtResource("11_ywer8")]
 position = Vector2(113, 944)
@@ -96,14 +98,18 @@ dialogue_lines = Array[String](["A note is stuck to the box", "REMINDER: ARCHIVE
 
 [node name="closed door 3" parent="." instance=ExtResource("4_c4kj8")]
 position = Vector2(1680, 784)
+dialogue_lines = Array[String](["Enter Password: "])
 requires_password = true
 correct_password = "AEPDZNBM"
+object_to_spawn = ExtResource("9_qf8ch")
 
 [node name="wall 7" parent="." instance=ExtResource("6_cglsx")]
 position = Vector2(1777, 784)
+dialogue_lines = Array[String](["Nothing on the wall"])
 
 [node name="wall 8" parent="." instance=ExtResource("6_cglsx")]
 position = Vector2(1815, 784)
+dialogue_lines = Array[String](["Nothing on the wall"])
 
 [node name="note wala chest2" parent="." instance=ExtResource("12_88dk6")]
 position = Vector2(1073, 839)
@@ -115,11 +121,11 @@ dialogue_lines = Array[String](["There is a sticky note on the box", "IT reads: 
 
 [node name="black board" parent="." instance=ExtResource("13_8mo7a")]
 position = Vector2(1346, 784)
-dialogue_lines = Array[String](["There is something writteon the blackboard", "SECURITY", "Huh... what an odd thing to write", "I wonder if it's important?"])
+dialogue_lines = Array[String](["There is something written on the blackboard", "SECURITY", "Huh... what an odd thing to write", "I wonder if it's important?"])
 
 [node name="blue screen" parent="." instance=ExtResource("14_6x5bq")]
 position = Vector2(897, 784)
-dialogue_lines = Array[String](["There sems to be information regarding Obsidian Technology's business plans", "I can't say I have the time to do anything about it", "Finding Agent 01 is my priority!"])
+dialogue_lines = Array[String](["There seems to be information regarding Obsidian Technology's business plans", "I can't say I have the time to do anything about it", "Finding Agent 01 is my priority!"])
 
 [node name="blue screen2" parent="." instance=ExtResource("14_6x5bq")]
 position = Vector2(1503, 592)
@@ -127,8 +133,11 @@ dialogue_lines = Array[String](["\"CONFIDENTIAL INFORMATION\"\"", "KEYWORDABCFZ"
 
 [node name="red screen" parent="." instance=ExtResource("15_jdf16")]
 position = Vector2(1312, 592)
-dialogue_lines = Array[String]([""])
+dialogue_lines = Array[String](["Enter the password: "])
 requires_password = true
+correct_password = "NETHERLANDS"
+object_to_spawn = ExtResource("15_jdf16")
+post_password_dialogue = Array[String](["System hacked", "All the data on Agent 01's location can be seen on the screen", "Successfully found Agent 01's location"])
 
 [node name="red screen2" parent="." instance=ExtResource("15_jdf16")]
 position = Vector2(1539, 784)
@@ -168,6 +177,7 @@ dialogue_lines = Array[String](["S  E  C  U  R  I  T  Y  A  B  D  F  G  H  J  K 
 
 [node name="closed door" parent="." instance=ExtResource("4_c4kj8")]
 position = Vector2(302, 942)
+dialogue_lines = Array[String](["Enter Password: "])
 requires_password = true
 correct_password = "LYHRWRZM"
 object_to_spawn = ExtResource("9_qf8ch")
@@ -181,6 +191,7 @@ object_to_spawn = ExtResource("9_qf8ch")
 
 [node name="rigged wall" parent="." instance=ExtResource("16_7fmeq")]
 position = Vector2(364, 400)
+dialogue_lines = Array[String](["Nothing on this wall"])
 
 [node name="note wala table 2" parent="." instance=ExtResource("8_kaxr0")]
 position = Vector2(622, 455)

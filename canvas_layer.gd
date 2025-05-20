@@ -133,5 +133,14 @@ func _close():
 		call_deferred("_run_callback", finished_callback)
 
 
-func _run_callback(cb: Callable):
-	cb.call()
+func _run_callback(cb):
+	if cb == null:
+		return
+
+	if typeof(cb) == TYPE_STRING:
+		# If a method name is passed as a string, call it on the item_to_destroy
+		if is_instance_valid(item_to_destroy) and item_to_destroy.has_method(cb):
+			item_to_destroy.call(cb)
+
+	elif typeof(cb) == TYPE_CALLABLE and cb.is_valid():
+		cb.call()

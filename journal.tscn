@@ -5,6 +5,7 @@
 
 [sub_resource type="SystemFont" id="SystemFont_fiqo7"]
 font_names = PackedStringArray("Segoe Script")
+subpixel_positioning = 0
 
 [node name="Journal" type="CanvasLayer"]
 process_mode = 3
