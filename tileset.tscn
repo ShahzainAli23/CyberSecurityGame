@@ -66,6 +66,7 @@ dialogue_lines = Array[String](["There is a note in the bin", "Finding the mirro
 
 [node name="note wala trash 3" parent="." instance=ExtResource("4_s1fi1")]
 position = Vector2(847, 636)
+dialogue_lines = Array[String](["\"Arrange everything in a grid.... or according to... columns...\""])
 
 [node name="note wala trash 4" parent="." instance=ExtResource("4_s1fi1")]
 position = Vector2(1168, 828)
@@ -96,7 +97,7 @@ dialogue_lines = Array[String](["A note is stuck to the box", "REMINDER: ARCHIVE
 [node name="closed door 3" parent="." instance=ExtResource("4_c4kj8")]
 position = Vector2(1680, 784)
 requires_password = true
-correct_password = "PLIUFHXD"
+correct_password = "AEPDZNBM"
 
 [node name="wall 7" parent="." instance=ExtResource("6_cglsx")]
 position = Vector2(1777, 784)
@@ -105,11 +106,12 @@ position = Vector2(1777, 784)
 position = Vector2(1815, 784)
 
 [node name="note wala chest2" parent="." instance=ExtResource("12_88dk6")]
-position = Vector2(1072, 839)
-dialogue_lines = Array[String](["There is a sticky note stuck to the box", "\"ITEMS IN THIS BOX ARE ONLY FOR FAIR PLAY\""])
+position = Vector2(1073, 839)
+dialogue_lines = Array[String](["There is a sticky note stuck to the box", "\"REMINDER: 13th IS IMPORTANT\""])
 
 [node name="note wala chest3" parent="." instance=ExtResource("12_88dk6")]
 position = Vector2(1648, 649)
+dialogue_lines = Array[String](["There is a sticky note on the box", "IT reads: \"CHARLIE'S ITEMS\"", "This box seems to contain Agent 01's posessions. You open the box to find all his personal equipment. ", "His ID Card, gun, wallet. Everything is here.", "You see a small crumpled note in his wallet. It reads \"LESDANHNETRS\". ", "What does this mean?"])
 
 [node name="black board" parent="." instance=ExtResource("13_8mo7a")]
 position = Vector2(1346, 784)
@@ -121,9 +123,11 @@ dialogue_lines = Array[String](["There sems to be information regarding Obsidian
 
 [node name="blue screen2" parent="." instance=ExtResource("14_6x5bq")]
 position = Vector2(1503, 592)
+dialogue_lines = Array[String](["\"CONFIDENTIAL INFORMATION\"\"", "KEYWORDABCFZ"])
 
 [node name="red screen" parent="." instance=ExtResource("15_jdf16")]
 position = Vector2(1312, 592)
+dialogue_lines = Array[String]([""])
 requires_password = true
 
 [node name="red screen2" parent="." instance=ExtResource("15_jdf16")]
@@ -148,11 +152,11 @@ dialogue_lines = Array[String](["OBSIDIAN TECH LOG:", "\"I think access to the s
 
 [node name="computer table5" parent="." instance=ExtResource("5_bixnw")]
 position = Vector2(1517, 956)
-dialogue_lines = Array[String](["Someone left the computer screen on", "\"The word “monarchy” comes from the Greek words “monos,” meaning “one,” and “archein,” meaning “to rule.”\"", "\"Monarchies have often used elaborate hats known as crowns.\"", "\"Some monarchs have pet corgis or enjoy afternoon tea, but none have ever owned a pet octopus, as far as historians know\"", "..... Why is this here?"])
+dialogue_lines = Array[String](["Someone left the computer screen on", "OBSIDIAN TECH LOG:", "\"13th: ....\""])
 
 [node name="book table" parent="." instance=ExtResource("16_u2msr")]
 position = Vector2(1518, 1084)
-dialogue_lines = Array[String](["There is a notebook on the table", "\"Ugh, why is the boss making us use two ciphers?\"", "\"His hint to remember it is so hard as well\"", "\"SECURITY comes first, then does the MONARCHY\"", "\"What does that even mean?\""])
+dialogue_lines = Array[String](["There is a notebook on the table", "\"Ugh, why is the boss making us use two ciphers?\"", "\"His hint to remember it is so hard as well\"", "\"SECURITY comes first, then the 13th\"\"", "\"What does that even mean?\""])
 
 [node name="book table2" parent="." instance=ExtResource("16_u2msr")]
 position = Vector2(1007, 956)
@@ -160,7 +164,7 @@ dialogue_lines = Array[String](["There are some books and notes lying on the tab
 
 [node name="book table3" parent="." instance=ExtResource("16_u2msr")]
 position = Vector2(878, 1083)
-dialogue_lines = Array[String](["Q W E R T Y U I O P A S D F G H J K L Z X C V B N M"])
+dialogue_lines = Array[String](["S  E  C  U  R  I  T  Y  A  B  D  F  G  H  J  K  L  M  N  O  P  Q  V  W  Z  X"])
 
 [node name="closed door" parent="." instance=ExtResource("4_c4kj8")]
 position = Vector2(302, 942)
