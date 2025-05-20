@@ -19,3 +19,4 @@ position = Vector2(531, 202)
 position = Vector2(61, -4)
 
 [node name="Journal" parent="." instance=ExtResource("4_chya6")]
+visible = false

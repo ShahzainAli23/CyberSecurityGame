@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://0wqk4n3m4u7b"]
+[gd_scene load_steps=5 format=3 uid="uid://0wqk4n3m4u7b"]
 
 [ext_resource type="Script" path="res://titlescreennode.gd" id="1_drfqu"]
 [ext_resource type="Texture2D" uid="uid://btmdivamnnufy" path="res://Assets/titlescreen.png" id="1_ep5ty"]
+[ext_resource type="Texture2D" uid="uid://o5s27aufmoii" path="res://tutorial.png" id="3_nf7yo"]
+[ext_resource type="FontFile" uid="uid://dd4v55iccgis2" path="res://Orbitron-VariableFont_wght.ttf" id="4_xi74d"]
 
 [node name="Titlescreen" type="Control"]
 layout_mode = 3
@@ -40,4 +42,45 @@ offset_bottom = 431.0
 layout_mode = 2
 text = "PLAY"
 
+[node name="MessageBox" type="TextureRect" parent="titlescreennode"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_nf7yo")
+
+[node name="TextEdit" type="TextEdit" parent="titlescreennode/MessageBox"]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 68.0
+offset_right = 1078.0
+offset_bottom = 483.0
+theme_override_colors/font_readonly_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_xi74d")
+theme_override_font_sizes/font_size = 25
+text = "Agent 00, this is Chief Kim speaking. 
+We need you to beak into Obsidian Tech's base to find out where they're
+hiding Agent 01.
+Our intel told us the location of the hiding spot is stored in one of the
+computers. 
+Break into the facility and find out where they're hiding Agent 01!
+It is imperative that you don't get caught.
+We trust in your abilities to succeed. 
+Don't forget, you have your journal with you which has any important
+information you might need.
+Solve the mystery to find out where Agent 01 is located!"
+
+[node name="LevelButton" type="Button" parent="titlescreennode/MessageBox"]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 507.0
+offset_right = 740.0
+offset_bottom = 578.0
+text = "NEXT"
+
 [connection signal="pressed" from="titlescreennode/VBoxContainer/PlayButton" to="titlescreennode" method="_on_play_button_pressed"]
+[connection signal="gui_input" from="titlescreennode/MessageBox" to="titlescreennode" method="_on_message_box_gui_input"]
+[connection signal="pressed" from="titlescreennode/MessageBox/LevelButton" to="titlescreennode" method="_on_level_button_pressed"]
