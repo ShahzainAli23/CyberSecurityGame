@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://cai1gi67c7lxv"]
+[gd_scene load_steps=18 format=4 uid="uid://cai1gi67c7lxv"]
 
 [ext_resource type="TileSet" uid="uid://dq22oefprurwj" path="res://Tilesets/test_tilesets.tres" id="1_yfoub"]
 [ext_resource type="PackedScene" uid="uid://sq3eb8x4hen5" path="res://close_door.tscn" id="4_c4kj8"]
@@ -14,6 +14,7 @@
 [ext_resource type="PackedScene" uid="uid://b2cmqav4blhx4" path="res://black_tv.tscn" id="13_8mo7a"]
 [ext_resource type="PackedScene" uid="uid://cfi0rge0lbkcf" path="res://blue_tv.tscn" id="14_6x5bq"]
 [ext_resource type="PackedScene" uid="uid://ll7f31w54sqe" path="res://red_tv.tscn" id="15_jdf16"]
+[ext_resource type="PackedScene" uid="uid://cxgw26pqa4a2l" path="res://blue_tv_end.tscn" id="15_y3ivu"]
 [ext_resource type="PackedScene" uid="uid://dnp4wpklsqkr1" path="res://red_wall_rigged.tscn" id="16_7fmeq"]
 [ext_resource type="PackedScene" uid="uid://vn67mgr766m0" path="res://books.tscn" id="16_u2msr"]
 
@@ -136,8 +137,7 @@ position = Vector2(1312, 592)
 dialogue_lines = Array[String](["Enter the password: "])
 requires_password = true
 correct_password = "NETHERLANDS"
-object_to_spawn = ExtResource("15_jdf16")
-post_password_dialogue = Array[String](["System hacked", "All the data on Agent 01's location can be seen on the screen", "Successfully found Agent 01's location"])
+object_to_spawn = ExtResource("15_y3ivu")
 
 [node name="red screen2" parent="." instance=ExtResource("15_jdf16")]
 position = Vector2(1539, 784)

@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://0wqk4n3m4u7b"]
+[gd_scene load_steps=6 format=3 uid="uid://0wqk4n3m4u7b"]
 
 [ext_resource type="Script" path="res://titlescreennode.gd" id="1_drfqu"]
-[ext_resource type="Texture2D" uid="uid://btmdivamnnufy" path="res://Assets/titlescreen.png" id="1_ep5ty"]
-[ext_resource type="Texture2D" uid="uid://o5s27aufmoii" path="res://tutorial.png" id="3_nf7yo"]
-[ext_resource type="FontFile" uid="uid://dd4v55iccgis2" path="res://Orbitron-VariableFont_wght.ttf" id="4_xi74d"]
+[ext_resource type="Texture2D" uid="uid://b5btm4dk2luku" path="res://Assets/titlescreen.png" id="1_ep5ty"]
+[ext_resource type="Texture2D" uid="uid://dgbqlaeooak7v" path="res://tutorial.png" id="3_nf7yo"]
+[ext_resource type="FontFile" uid="uid://brbxd411b88pw" path="res://Orbitron-VariableFont_wght.ttf" id="4_xi74d"]
+[ext_resource type="AudioStream" uid="uid://cv3vtdmtga2li" path="res://game-start-317318.mp3" id="5_q7p2x"]
 
 [node name="Titlescreen" type="Control"]
 layout_mode = 3
@@ -80,6 +81,9 @@ offset_top = 507.0
 offset_right = 740.0
 offset_bottom = 578.0
 text = "NEXT"
+
+[node name="PlaySound" type="AudioStreamPlayer2D" parent="titlescreennode"]
+stream = ExtResource("5_q7p2x")
 
 [connection signal="pressed" from="titlescreennode/VBoxContainer/PlayButton" to="titlescreennode" method="_on_play_button_pressed"]
 [connection signal="gui_input" from="titlescreennode/MessageBox" to="titlescreennode" method="_on_message_box_gui_input"]
