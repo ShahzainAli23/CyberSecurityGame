@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://b4afftba8km4w"]
 
 [ext_resource type="Script" path="res://journal.gd" id="1_0qf8m"]
-[ext_resource type="Texture2D" uid="uid://blcqgk48o8b17" path="res://paper.jpg" id="2_8kwqu"]
+[ext_resource type="Texture2D" uid="uid://mle423yjeglj" path="res://paper.jpg" id="2_8kwqu"]
 
 [sub_resource type="SystemFont" id="SystemFont_fiqo7"]
 font_names = PackedStringArray("Segoe Script")

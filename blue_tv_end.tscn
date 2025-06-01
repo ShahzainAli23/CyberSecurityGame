@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://blue_tv_end.gd" id="1_87rh8"]
 [ext_resource type="Script" path="res://staticBodyItem.gd" id="2_jk223"]
-[ext_resource type="Texture2D" uid="uid://dpnt52d5iobrd" path="res://Assets/set_det.png" id="3_rao7g"]
+[ext_resource type="Texture2D" uid="uid://or6ifj3xj1u5" path="res://Assets/set_det.png" id="3_rao7g"]
 [ext_resource type="Script" path="res://area_2d_item.gd" id="4_hbhwl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8doxa"]

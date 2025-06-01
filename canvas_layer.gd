@@ -3,6 +3,11 @@ extends CanvasLayer
 @onready var label = $Panel/Label
 @onready var next_icon = $Panel/NextIcon
 
+# 🔊 Sound files
+@onready var dialogue_beep = preload("res://Sounds/Dialogue.wav")
+@onready var password_correct = preload("res://Sounds/success.wav")
+@onready var password_wrong = preload("res://Sounds/fail.mp3")
+
 var dialogue_lines = []
 var current_index = 0
 var active = false
@@ -41,6 +46,7 @@ func show_line(text: String):
 	char_index = 0
 	typing = true
 	next_icon.visible = false
+	play_sound(dialogue_beep, -25) # 🔊 10% volume
 	type_next_character()
 
 func type_next_character():
@@ -56,8 +62,6 @@ func type_next_character():
 		typing = false
 		next_icon.visible = true
 
-  # Add this at the top
-
 func request_password(correct_password: String, callback = null, item: Node = null):
 	expected_password = correct_password
 	input_buffer = ""
@@ -67,8 +71,7 @@ func request_password(correct_password: String, callback = null, item: Node = nu
 	visible = true
 	label.text = "Enter the password:\n> "
 	next_icon.visible = false
-	item_to_destroy = item  # Store reference to the item
-
+	item_to_destroy = item
 
 func _input(event):
 	if not active:
@@ -97,6 +100,7 @@ func _input(event):
 				input_buffer = input_buffer.substr(0, input_buffer.length() - 1)
 			elif event.keycode == KEY_ENTER or event.is_action_pressed("cycle_through_dialogues"):
 				if input_buffer == expected_password:
+					play_sound(password_correct, -6) # ✅ 50% volume
 					if is_instance_valid(item_to_destroy):
 						var position = item_to_destroy.position
 						var parent = item_to_destroy.get_parent()
@@ -110,9 +114,8 @@ func _input(event):
 							parent.add_child(new_instance)
 
 					_close()
-
-
 				else:
+					play_sound(password_wrong, -6) # ❌ 50% volume
 					label.text = "\n"
 					show_dialogue([password_fail_line], func():
 						var player = get_node("/root/Main/Player")
@@ -132,15 +135,22 @@ func _close():
 	if finished_callback:
 		call_deferred("_run_callback", finished_callback)
 
-
 func _run_callback(cb):
 	if cb == null:
 		return
 
 	if typeof(cb) == TYPE_STRING:
-		# If a method name is passed as a string, call it on the item_to_destroy
 		if is_instance_valid(item_to_destroy) and item_to_destroy.has_method(cb):
 			item_to_destroy.call(cb)
 
 	elif typeof(cb) == TYPE_CALLABLE and cb.is_valid():
 		cb.call()
+
+# 🔊 Sound helper with custom volume
+func play_sound(stream: AudioStream, volume_db := -12):
+	var sfx = AudioStreamPlayer.new()
+	sfx.stream = stream
+	sfx.volume_db = volume_db
+	add_child(sfx)
+	sfx.play()
+	sfx.finished.connect(sfx.queue_free)

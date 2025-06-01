@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://icnwg3hlsr66"]
+[gd_scene load_steps=6 format=3 uid="uid://icnwg3hlsr66"]
 
 [ext_resource type="PackedScene" uid="uid://hklnqlle6ic1" path="res://player.tscn" id="1_pyi2x"]
+[ext_resource type="Script" path="res://main.gd" id="1_souad"]
 [ext_resource type="PackedScene" uid="uid://cai1gi67c7lxv" path="res://tileset.tscn" id="3_dukgf"]
 [ext_resource type="PackedScene" uid="uid://dm8ufwn018j3m" path="res://DialogueBox.tscn" id="3_mv4uq"]
 [ext_resource type="PackedScene" uid="uid://b4afftba8km4w" path="res://journal.tscn" id="4_chya6"]
 
 [node name="Main" type="Node2D"]
+script = ExtResource("1_souad")
 
 [node name="Player" parent="." instance=ExtResource("1_pyi2x")]
 light_mask = 2

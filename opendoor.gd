@@ -13,4 +13,5 @@ func _on_body_exited(body):
 		body.interactable = null
 
 func interact():
+	SoundManager.play_door_open()
 	queue_free()

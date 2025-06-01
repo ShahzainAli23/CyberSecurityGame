@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://item.gd" id="1_hknxn"]
 [ext_resource type="Script" path="res://staticBodyItem.gd" id="1_mmw81"]
-[ext_resource type="Texture2D" uid="uid://brvmdjkovgmau" path="res://icon.svg" id="2_13ghi"]
+[ext_resource type="Texture2D" uid="uid://cllr1e7h2fq0y" path="res://icon.svg" id="2_13ghi"]
 [ext_resource type="Script" path="res://area_2d_item.gd" id="3_5g7rw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8doxa"]

@@ -26,7 +26,7 @@ font_size = 22
 [sub_resource type="LabelSettings" id="LabelSettings_h2xoo"]
 font_size = 32
 
-[node name="CanvasLayer" type="CanvasLayer"]
+[node name="DialogueBox" type="CanvasLayer"]
 script = ExtResource("1_qf6sp")
 
 [node name="Panel" type="Panel" parent="."]
